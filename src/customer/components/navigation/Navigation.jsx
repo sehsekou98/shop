@@ -1,32 +1,32 @@
 
-import { Fragment, useState, useEffect } from 'react'
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Avatar, Button, Menu, MenuItem } from '@mui/material'
-import { deepPurple } from '@mui/material/colors'
-import { navigation } from "./navigationData"
+import { Fragment, useState, } from 'react';
+import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
+import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Avatar, Button, Menu, MenuItem } from '@mui/material';
+import { deepPurple } from '@mui/material/colors';
+import { navigation } from './navigationData'
+
+
 
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
-
 export default function Navigation() {
-  const [open, setOpen] = useState(false)
-
+  const [open, setOpen] = useState(false);
   const [openAuthModal, setOpenAuthModal] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
 
-
   const handleUserClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleCloseUserMenu = (event) => {
+
+  const handleCloseUserMenu = () => {
     setAnchorEl(null);
   };
- 
+
   const handleOpen = () => {
     setOpenAuthModal(true);
   };
@@ -34,11 +34,12 @@ export default function Navigation() {
   const handleClose = () => {
     setOpenAuthModal(false);
   };
-
+  
   const handleCategoryClick = (category, section, item, close) => {
-    //navigate('/${category.id}/$section.id/${item.id}');
+    //navigate('/${category.id}/${section.id}/${item.id}');
     close();
   };
+
 
   return (
     <div className="bg-white pb-10">
@@ -101,15 +102,28 @@ export default function Navigation() {
                   </div>
                   <Tab.Panels as={Fragment}>
                     {navigation.categories.map((category) => (
-                      <Tab.Panel key={category.name} className="space-y-10 px-4 pb-8 pt-10">
+                      <Tab.Panel
+                       key={category.name}
+                        className="space-y-10 px-4 pb-8 pt-10">
                         <div className="grid grid-cols-2 gap-x-4">
                           {category.featured.map((item) => (
-                            <div key={item.name} className="group relative text-sm">
+                            <div
+                             key={item.name} 
+                             className="group relative text-sm"
+                             >
+
                               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
-                                <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
+                                <img
+                                 src={item.imageSrc}
+                                  alt={item.imageAlt}
+                                   className="object-cover object-center"
+                                    />
                               </div>
-                              <a href={item.href} className="mt-6 block font-medium text-gray-900">
-                                <span className="absolute inset-0 z-10" aria-hidden="true" />
+                              <a
+                               href={item.href} 
+                               className="mt-6 block font-medium text-gray-900">
+                                <span className="absolute inset-0 z-10" aria-hidden="true"
+                                 />
                                 {item.name}
                               </a>
                               <p aria-hidden="true" className="mt-1">
@@ -123,6 +137,7 @@ export default function Navigation() {
                             <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
                               {section.name}
                             </p>
+                            {/** eslint-disable-next-line jsx-ally/no-redundant-roles */}
                             <ul
                               role="list"
                               aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
@@ -155,25 +170,26 @@ export default function Navigation() {
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <a href="/" className="-m-2 block p-2 font-medium text-gray-900">
+                    <a 
+                    href="/"
+                     className="-m-2 block p-2 font-medium text-gray-900"
+                     >
                       Sign in 
                     </a>
                   </div>
-                  <div className="flow-root">
-                    <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Create account
-                    </a>
                   </div>
-                </div>
+  
 
                 <div className="border-t border-gray-200 px-4 py-6">
-                  <a href="#" className="-m-2 flex items-center p-2">
+                  <a href="/" className="-m-2 flex items-center p-2">
                     <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-gray-900">LRD</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900">
+                      LRD
+                    </span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -185,7 +201,7 @@ export default function Navigation() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Welcome to Holy Ghost Online Shopping Center.
+          Get free delivery on orders over $100.
         </p>
 
         <nav aria-label="Top" className="mx-auto">
@@ -198,7 +214,7 @@ export default function Navigation() {
               >
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
               </button>
 
               {/* Logo */}
@@ -317,7 +333,8 @@ export default function Navigation() {
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   {true ? (
                     <div>
-                      <Avatar className='text-white' onClick={handleUserClick}
+                      <Avatar
+                       className='text-white' onClick={handleUserClick}
                       aria-controls={open ? "basic-menu" : undefined}
                       aria-haspopup='true'
                       aria-expanded={open ? 'true' : undefined}
@@ -341,7 +358,7 @@ export default function Navigation() {
                       </Button> */}
 
                       <Menu
-                      id='basic-menu'
+                      id="basic-menu"
                       anchorEl={anchorEl}
                       open={openUserMenu}
                       onClick={handleCloseUserMenu}
@@ -368,7 +385,7 @@ export default function Navigation() {
                   
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
+                  <a href="/" className="p-2 text-gray-400 hover:text-gray-500">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                   </a>
@@ -396,5 +413,5 @@ export default function Navigation() {
         </nav>
       </header>
     </div>
-  )
+  ); 
 }

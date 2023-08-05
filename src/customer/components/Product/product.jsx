@@ -1,7 +1,9 @@
 import React from 'react'
-import ProductCard from './productCard'
+import ProductCard from './ProductCard'
 
-const product = () => {
+
+
+const Product = () => {
   return (
     <div>
         <ProductCard />
@@ -9,4 +11,4 @@ const product = () => {
   )
 }
 
-export default product
+export default Product
