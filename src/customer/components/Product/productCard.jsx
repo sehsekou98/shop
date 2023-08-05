@@ -1,10 +1,10 @@
 import React from 'react'
-import './ProductCard.css'
+import "./ProductCard.css"
 
-
-const ProductCard = () => {
+const productCard = () => {
   return (
-    <div className='productCard w-[15rem] m-3 transition-all
+    <div>
+       <div className='productCard w-[15rem] m-3 transition-all
     cursor-pointer'>
         <div className='h-[20rem]'>
             <img className='h-full w-full object-cover object-left-top'
@@ -22,7 +22,8 @@ const ProductCard = () => {
           </div>
         </div>
     </div>
+    </div>
   )
 }
 
-export default ProductCard
+export default productCard
