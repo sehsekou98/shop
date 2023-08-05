@@ -4,7 +4,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Avatar, Button, Menu, MenuItem } from '@mui/material'
 import { deepPurple } from '@mui/material/colors'
-import {navigation} from "./navigationData"
+import { navigation } from "./navigationData"
 
 
 function classNames(...classes) {
@@ -27,7 +27,7 @@ export default function Navigation() {
     setAnchorEl(null);
   };
  
-  const handleOPen = () => {
+  const handleOpen = () => {
     setOpenAuthModal(true);
   };
 
@@ -155,8 +155,8 @@ export default function Navigation() {
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <a href="#" className="-m-2 block p-2 font-medium text-gray-900">
-                      Sign in
+                    <a href="/" className="-m-2 block p-2 font-medium text-gray-900">
+                      Sign in 
                     </a>
                   </div>
                   <div className="flow-root">
@@ -173,7 +173,7 @@ export default function Navigation() {
                       alt=""
                       className="block h-auto w-5 flex-shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                    <span className="ml-3 block text-base font-medium text-gray-900">LRD</span>
                     <span className="sr-only">, change currency</span>
                   </a>
                 </div>
@@ -318,9 +318,9 @@ export default function Navigation() {
                   {true ? (
                     <div>
                       <Avatar className='text-white' onClick={handleUserClick}
-                      aria-aria-controls={open ? "basic-menu" : undefined}
-                      aria-aria-haspopup='true'
-                      aria-aria-expanded={open ? 'true' : undefined}
+                      aria-controls={open ? "basic-menu" : undefined}
+                      aria-haspopup='true'
+                      aria-expanded={open ? 'true' : undefined}
                       //onClick={handleUserClick}
                       sx={{
                         bgcolor: deepPurple[500],
@@ -332,9 +332,9 @@ export default function Navigation() {
                       </Avatar>
                       {/* <Button
                       id="basic-button"
-                      aria-controls={open ? "basic-menu" : underfined}
+                      aria-controls={open ? "basic-menu" : undefined}
                       aria-haspopus="true"
-                      arai-expanded={open ? "true" : underfined}
+                      arai-expanded={open ? "true" : undefined}
                       onClick={handlerUserClick}
                       >
                       Dashboard
@@ -358,7 +358,7 @@ export default function Navigation() {
                     </div>
                   ) : ( 
                     <Button 
-                    onClick={handleOPen}
+                    onClick={handleOpen}
                     className='text-sm font-medium text-gray-700 hover:text-gray-800'
                     >
                       Signin

@@ -14,31 +14,31 @@ const Footer = () => {
             Company{" "}
           </Typography>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" ggutterbottom="true" >
             {" "}
             About{" "}
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Blog{" "}
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Press{" "}
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Jobs{" "}
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true">
             {" "}
             Partners{" "}
           </Button>
@@ -53,31 +53,31 @@ const Footer = () => {
             Soluctions{" "}
           </Typography>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Marketing
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Analytics
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Commerce
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true">
             {" "}
             Insights
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true">
             {" "}
             Supports
           </Button>
@@ -91,13 +91,13 @@ const Footer = () => {
             Documentation{" "}
           </Typography>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Guides
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
            API Status
           </Button>
@@ -111,13 +111,13 @@ const Footer = () => {
             Legal{" "}
           </Typography>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true" >
             {" "}
             Privacy
           </Button>
           </div>
           <div>
-          <Button className="pb-5" variant="h6" gutterBottom>
+          <Button className="pb-5" variant="h6" gutterbottom="true"  >
             {" "}
            Terms
           </Button>
