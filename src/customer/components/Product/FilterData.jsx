@@ -20,7 +20,7 @@ export const color = [
                 {value: "brown", label: "Brown"},
                 {value: "green", label: "Green"},
                 {value: "purple", label: "Purple"},
-                {value: "yellow", label: "Yellow"}
+                {value: "yellow", label: "Yellow"},
             ],
         },
 
@@ -52,8 +52,8 @@ export const color = [
           ],
         },
         {
-            id: "discount",
-            name: "Discount Range",
+            id: "disccount",
+            name: "Disccount Range",
             options: [
                 {
                     value: "10",
