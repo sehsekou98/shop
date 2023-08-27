@@ -4,7 +4,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react';
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Avatar, Button, Menu, MenuItem } from '@mui/material';
 import { deepPurple } from '@mui/material/colors';
-import { navigation } from './navigationData'
+
 
 
 
@@ -201,7 +201,11 @@ export default function Navigation() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+<<<<<<< HEAD
           Get free delivery on orders over MAD 100.
+=======
+          Get free delivery on orders over $ MAD-100.
+>>>>>>> a585a34406730f9315cb362ef88dc42c32937052
         </p>
 
         <nav aria-label="Top" className="mx-auto">
@@ -220,7 +224,11 @@ export default function Navigation() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
+<<<<<<< HEAD
                   <span className="sr-only">EASYTECH</span>
+=======
+                  <span className="sr-only">EasyTech</span>
+>>>>>>> a585a34406730f9315cb362ef88dc42c32937052
                   <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
