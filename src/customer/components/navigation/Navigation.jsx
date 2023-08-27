@@ -188,7 +188,7 @@ export default function Navigation() {
                       className="block h-auto w-5 flex-shrink-0"
                     />
                     <span className="ml-3 block text-base font-medium text-gray-900">
-                      LRD
+                      MAD
                     </span>
                     <span className="sr-only">, change currency</span>
                   </a>
@@ -201,7 +201,7 @@ export default function Navigation() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100.
+          Get free delivery on orders over MAD 100.
         </p>
 
         <nav aria-label="Top" className="mx-auto">
@@ -220,7 +220,7 @@ export default function Navigation() {
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
-                  <span className="sr-only">Your Company</span>
+                  <span className="sr-only">EASYTECH</span>
                   <img
                     className="h-8 w-auto"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
@@ -401,7 +401,7 @@ export default function Navigation() {
                     arai-aria-hidden='true'
                     />
                     <span className='ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800'>
-                      2
+                      1 
                     </span>
                     <span className='sr-only'>items in cart, view bag</span>
 

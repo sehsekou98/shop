@@ -19,6 +19,7 @@ import {
   Radio,
   RadioGroup,
 } from "@mui/material";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 const sortOptions = [
   { name: "Price: Low to High", href: "#", current: false },
@@ -31,6 +32,41 @@ function classNames(...classes) {
 
 export default function Product() {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleFilter = (value, sectionId) => {
+    const searchParams = new URLSearchParams(location.search);
+
+    let filterValue = searchParams.getAll(sectionId);
+
+    if (filterValue.length > 0 && filterValue[0].split(",").includes(value)) {
+      filterValue = filterValue[0].split(",").filter((item) => item !== value);
+
+      if (filterValue.length === 0) {
+        searchParams.delete(sectionId);
+        console.log("yes delete");
+      }
+      console.log("includes, ", value, sectionId, filterValue);
+    } else {
+      filterValue.push(value);
+    }
+
+    if (filterValue.length > 0) {
+      searchParams.set(sectionId, filterValue.join(","));
+    }
+    const query = searchParams.toString();
+    navigate({ search: `?${query}` });
+  };
+
+  const handleRadioFilterChange = () => {
+    const searchParams = new URLSearchParams(location.search);
+
+    searchParams.set(sectionId, e.target.value);
+    const query = searchParams.toString();
+    navigate({ search: `?${query}` });
+  };
 
   return (
     <div className="bg-white">
@@ -227,7 +263,7 @@ export default function Product() {
                   <FilterListIcon />
                 </div>
 
-                 <form className="hidden lg:block">
+                <form className="hidden lg:block">
                   {filters.map((section) => (
                     <Disclosure
                       as="div"
@@ -264,6 +300,9 @@ export default function Product() {
                                   className="flex items-center"
                                 >
                                   <input
+                                    onChange={() =>
+                                      handleFilter(option.value, section.id)
+                                    }
                                     id={`filter-${section.id}-${optionIdx}`}
                                     name={`${section.id}[]`}
                                     defaultValue={option.value}
@@ -329,7 +368,10 @@ export default function Product() {
                                   {section.options.map((option, optionIdx) => (
                                     <>
                                       <FormControlLabel
-                                        value={option.id}
+                                        onChange={(e) =>
+                                          handleRadioFilterChange(e, section.id)
+                                        }
+                                        value={option.value}
                                         control={<Radio />}
                                         label={option.label}
                                       />
