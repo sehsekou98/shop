@@ -13,13 +13,13 @@ const ProductReview = () => {
         </Grid>
 
         <Grid item xs={9}>
-            <div className='spaci-y-2'>
+            <div className='space-y-2'>
                 <div>
-                    <p>Sekou</p>
-                    <p>August 29, 2023</p>
+                    <p className='font-semibold text-lg'>Sekou</p>
+                    <p className='opacity-70'>August 29, 2023</p>
                 </div>
             </div>
-            <Rating value={4.4} name='full-rating'/>
+            <Rating value={4.4} name='full-rating' readOnly precision={.5}/>
             <p>The Basic Tee 6-Pack allows you to fully 
                 express your vibrant personality with three grayscale options.
                 </p>

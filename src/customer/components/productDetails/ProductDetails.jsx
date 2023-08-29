@@ -290,12 +290,12 @@ export default function ProductDetails() {
 
       {/**rating reviews */}
         <section>
-          <h1 className="font-semibold text-lg pb-4">Recent Review & Rating</h1>
+          <h1 className="font-semibold text-lg pb-4">Recent Reviews & Ratings</h1>
           <div className="border p-5">
             <Grid container spacing={7}>
               <Grid item xs={7}>
                 <div className="space-y-5">
-                  <ProductReview />
+                 {[1,1,1].map((item)=> <ProductReview />)}
                 </div>
               </Grid>
             </Grid>
