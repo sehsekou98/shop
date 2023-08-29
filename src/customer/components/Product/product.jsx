@@ -2,23 +2,11 @@ import React, { Fragment, useState } from "react";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import FilterListIcon from "@mui/icons-material/FilterList";
-import {
-  ChevronDownIcon,
-  FunnelIcon,
-  MinusIcon,
-  PlusIcon,
-  Squares2X2Icon,
-} from "@heroicons/react/20/solid";
-import { men_cloths } from "../../Data/Men_cloths";
+import {ChevronDownIcon,FunnelIcon,MinusIcon,PlusIcon,Squares2X2Icon,} from "@heroicons/react/20/solid";
+import { women_hair } from "../../Data/women_hair";
 import ProductCard from "./ProductCard";
 import { filters, singleFilter } from "./FilterData";
-import {
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  Radio,
-  RadioGroup,
-} from "@mui/material";
+import {FormControl,FormControlLabel,FormLabel,Radio,RadioGroup,} from "@mui/material";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 const sortOptions = [
@@ -390,7 +378,7 @@ export default function Product() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className="flex flex-wrap justify-center bg-white py-5">
-                  {men_cloths.map((item) => (
+                  {women_hair.map((item) => (
                     <ProductCard product={item} />
                   ))}
                 </div>

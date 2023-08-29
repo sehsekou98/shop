@@ -1,7 +1,7 @@
 import React from 'react'
 import MainCrosel from '../../components/Home/MainCrosel'
 import HomeSectionCrosel from '../../components/HomeSectionCrosel/HomeSectionCrosel'
-import { men_cloths } from "../../Data/Men_cloths";
+import { men_cloths } from "../../Data/women_hair";
 
 const HomePage = () => {
   return (
