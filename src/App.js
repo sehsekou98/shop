@@ -6,6 +6,7 @@ import Navigation from './customer/components/navigation/Navigation';
 import Product from './customer/components/Product/Product'; 
 import ProductDetails from './customer/components/productDetails/ProductDetails';
 import Cart from './customer/components/Cart/Cart';
+import Checkout from './customer/components/Checkout/Checkout';
 
 
 
@@ -17,7 +18,8 @@ function App() {
       { /* <HomePage /> */} 
        {/* <Product /> */}
        {/*<ProductDetails/>*/}
-       <Cart />
+      {/* <Cart /> */}
+      <Checkout />
      </div> 
      <Footer />
     </div>
