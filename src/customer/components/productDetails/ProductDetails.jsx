@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
-import { Button, Grid, Rating } from "@mui/material";
+import { Box, Button, Grid, LinearProgress, Rating } from "@mui/material";
 import ProductReview from "./ProductReview";
 
 const product = {
@@ -66,7 +66,7 @@ export default function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white lg:px-20">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol
@@ -116,7 +116,7 @@ export default function ProductDetails() {
                 className="h-full w-full object-cover object-center"
               />
             </div>
-            <div className="flex flex-wrap object-cover object-center">
+            <div className="flex flex-wrap object-cover object-center gap-3">
               {product.images.map((item) => (
                 <div className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg max-w-[5rem] max-h-[5rem] mt-4">
                   <img
@@ -165,7 +165,7 @@ export default function ProductDetails() {
                
 
                 {/* Sizes */}
-                <div className="mt-10">
+                <div className="mt-10" gap={2}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-sm font-medium text-gray-900">Size</h3>
                    
@@ -240,7 +240,7 @@ export default function ProductDetails() {
                   </RadioGroup>
                 </div>
 
-                <Button variant="contained" sx={{px:"2rem", py:"1rem", bgcolor:"#9155fd"}} >
+                <Button variant="contained" sx={{px:"2rem", py:"1rem", mt:"1rem", bgcolor:"#9155fd"}} >
                  Add To Cart
                 </Button>
                   
@@ -297,6 +297,62 @@ export default function ProductDetails() {
                 <div className="space-y-5">
                  {[1,1,1].map((item)=> <ProductReview />)}
                 </div>
+              </Grid>
+
+              <Grid item xs={5}>
+                <h1 className="text-xl font-semibold pb-2">Product Ratings</h1>
+                <div className="flex items-center space-x-3">
+                  <Rating value={4.6} precision={.5} readOnly/>
+                  <p className="opacity-60">56780 Rating</p>
+                </div>
+
+                <Box className="mt-5 space-y-3">
+                  <Grid container  alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Excellent</p>
+                      </Grid>
+
+                      <Grid item xs={7}>
+                        <LinearProgress sx={{bgcolor:"#dododo", borderRadius:4,height:7}} variant="determinate" value={100} color="success" />
+                    </Grid>
+                  </Grid>
+                  <Grid container  alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Very Good</p>
+                      </Grid>
+
+                      <Grid item xs={7}>
+                        <LinearProgress sx={{bgcolor:"#dododo", borderRadius:4,height:7}} variant="determinate" value={90} color="success" />
+                    </Grid>
+                  </Grid>
+                  <Grid container  alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Good </p>
+                      </Grid>
+
+                      <Grid item xs={7}>
+                        <LinearProgress sx={{bgcolor:"#dododo", borderRadius:4,height:7, color:"yellow"}} variant="determinate" value={80} />
+                    </Grid>
+                  </Grid>
+                  <Grid container  alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Avarage</p>
+                      </Grid>
+
+                      <Grid item xs={7}>
+                        <LinearProgress sx={{bgcolor:"#dododo", borderRadius:4,height:7}} variant="determinate" value={70} color="warning" />
+                    </Grid>
+                  </Grid>
+                  <Grid container  alignItems="center" gap={2}>
+                    <Grid item xs={2}>
+                      <p>Poor</p>
+                      </Grid>
+
+                      <Grid item xs={7}>
+                        <LinearProgress sx={{bgcolor:"#dododo", borderRadius:4,height:7}} variant="determinate" value={50} color="error" />
+                    </Grid>
+                  </Grid>
+                </Box>
               </Grid>
             </Grid>
           </div>
