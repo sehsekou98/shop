@@ -4,7 +4,7 @@ import React from "react";
 
 const CartItem = () => {
   return (
-    <div className="P-5 shadow-lg border rounded-md">
+    <div className="p-5 shadow-lg border rounded-md">
       <div className="flex items-center">
         <div className="w-[5rem] h-[5rem] lg:w-[9rem] lg:h-[9rem]">
           <img
@@ -24,23 +24,21 @@ const CartItem = () => {
             <p className="text-green-600 font-semibold">10% off</p>
           </div>
         </div>
-        
       </div>
       <div className="lg:flex items-center lg:space-x-10 pt-4">
-            <div className="flex items-center space-x-2">
-                <IconButton>
-                    <RemoveCircleOutline />
-                </IconButton>
-                <span className="py-1 px-7 border rounded">
-                    <IconButton>
-                        <AddCircleOutline />
-                    </IconButton>
-                 </span>
-            </div>
-            <div>
-                <Button>remove</Button>
-            </div>
+        <div className="flex items-center space-x-2">
+          <IconButton >
+            <RemoveCircleOutline />
+          </IconButton>
+          <span className="py-1 px-7 border rounded">2</span>
+            <IconButton sx={{bgcolor:"RGB(145 85 153)"}}>
+              <AddCircleOutline />
+            </IconButton>
         </div>
+        <div>
+          <Button sx={{color:"REB(145 85 153)" }}>remove</Button>
+        </div>
+      </div>
     </div>
   );
 };
