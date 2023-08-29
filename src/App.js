@@ -5,6 +5,7 @@ import Footer from './customer/components/Footer/Footer';
 import Navigation from './customer/components/navigation/Navigation';
 import Product from './customer/components/Product/Product'; 
 import ProductDetails from './customer/components/productDetails/ProductDetails';
+import Cart from './customer/components/Cart/Cart';
 
 
 
@@ -15,7 +16,8 @@ function App() {
      <div>
       { /* <HomePage /> */} 
        {/* <Product /> */}
-       <ProductDetails/>
+       {/*<ProductDetails/>*/}
+       <Cart />
      </div> 
      <Footer />
     </div>
